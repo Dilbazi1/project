@@ -27,9 +27,8 @@
 Для реализации хранилища можно применить любой подход,
 который вы придумаете, например, реализовать словарь.
 """
-
-def authorization1(users, user_name, user_password):  # Общая сложность O(n)
-    for key, value in users.items():  # n
+def authorization1(users, user_name, user_password):
+    for key, value in users.items():
         if key == user_name:
             if value[password] == user_password and value[activation]:
                 return "Добро пожаловать! Доступ к ресурсу предоставлен"
@@ -61,5 +60,4 @@ my_users = {user1: {password: 11111, activation: True},
             user3: {password: 11111, activation: True},
             user4: {password: 11111, activation: False}
             }
-
 print(authorization2(my_users, user6, 1111))
